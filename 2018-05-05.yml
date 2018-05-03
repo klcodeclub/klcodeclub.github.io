@@ -16,4 +16,6 @@ kaizau:
     - Anyone got experience with CI systems? Would love to automate merging
       valid pull requests and kicking off rebuilds.
 
-
+testing:
+  working_on: Testing this workflow.
+  public_link: .
