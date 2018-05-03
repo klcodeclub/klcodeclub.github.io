@@ -9,10 +9,11 @@
 #     - Etc.
 #
 
-Chee Seng Leong:
-  working_on: Designing a portfolio website for myself (specifically UI/UX).
-  public_link: none
+kaizau:
+  working_on: Building out a Github-as-CMS static site for KL Code Club.
+  public_link: https://github.com/kaizau/klcodeclub
   looking_for:
-    - Anyone that is interested in designing and front-end development
+    - Anyone got experience with CI systems? Would love to automate merging
+      valid pull requests and kicking off rebuilds.
 
 
