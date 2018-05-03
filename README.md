@@ -7,10 +7,10 @@ The second rule of Code Club is: You must commit code!
 
 1. Fork this repo
 
-2. Add your name/handle to the attendee list in the following format:
+2. Add your Github handle to the attendee list in the following format:
 
   ```yaml
-  name_or_github_handle:
+  github_handle:
     working_on: (required) What you're working on!
     public_link: (optional) https://link.to/your/project
     looking_for: (optional)
