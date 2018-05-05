@@ -36,6 +36,13 @@ ayswl:
     - Anyone who has worked on NLP projects
     - Unrelated but also want to connect with data scientists and data engineers, to learn and understand the ecosystem
 
+a-madhukar:
+  working_on: platform for people to volunteer 
+  public_link: TBA
+  looking_for:
+    - UI/UX 
+    - laravel devs
+
 asyrique
   working_on: Chrome extension that captures all the words in all thr websites i browse, so when i want to find an article i can keyword search qcross my who browsing history
   public_link: TBA
@@ -48,3 +55,27 @@ alvin
   public_link: TBA
   looking for:
     -Anyone who knows concurrent programming in java.
+
+prem
+  working_on: Bus management system using concurrency
+  public_link: TBA
+  looking_for:
+    - someone who is familiar with concurrency concepts (threads etc.) using Java in NetBeans
+
+vanessakhoo97:
+  working_on: Building bus depot simulator with Java  
+  public_link: TBA
+  looking_for:
+    - Anyone who has experience with Java Multithreading and Concurrency 
+      
+coolpau0204
+  working_on: to explore the machine learning
+  public_link: TBA
+  looking_for:
+    - Anyone experienced in this field
+    
+Danial
+  working_on: Exploring dynamic mysql with codeigniter
+  public_link: TBA
+  looking for: 
+    - anyone with codeigniter skills
