@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+    block headFonts
+    block headMeta
+      title Title
+      meta(name="description" content="Description")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='DIGEST(/assets/stylesheets/package.css)')
+    block headScripts
+
+  body
+    block content
+
+    script(src='DIGEST(/assets/javascripts/package.js)')
+    block footScripts

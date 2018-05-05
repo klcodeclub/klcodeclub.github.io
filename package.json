@@ -1,0 +1,33 @@
+{
+  "name": "klcodeclub",
+  "version": "0.0.1",
+  "description": "The first rule of Code Club is: You must commit code.",
+  "private": true,
+  "scripts": {
+    "start": "npm run clean && ./node_modules/brunch/bin/brunch watch --server --port 8888",
+    "build": "npm run clean && ./node_modules/brunch/bin/brunch build --production",
+    "clean": "rm -rf public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaizau/klcodeclub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaizau/klcodeclub/issues"
+  },
+  "homepage": "https://github.com/kaizau/klcodeclub",
+  "dependencies": {
+    "babel-brunch": "^6.1.1",
+    "brunch": "^2.10.12",
+    "clean-css-brunch": "^2.10.0",
+    "css-brunch": "^2.10.0",
+    "digest-brunch": "^1.5.1",
+    "envstatic-brunch": "^0.1.0",
+    "eslint-brunch": "^3.12.0",
+    "jade-static-brunch": "^1.8.4",
+    "javascript-brunch": "^2.10.0",
+    "stylus-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0",
+    "termly.js": "^2.5.6"
+  }
+}
