@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/kaizau/klcodeclub",
   "dependencies": {
-    "@types/node": "^10.0.4",
+    "@types/node": "^10.3.0",
     "babel-brunch": "^6.1.1",
     "brunch": "^2.10.12",
     "clean-css-brunch": "^2.10.0",
