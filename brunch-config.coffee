@@ -4,7 +4,7 @@
 
 config =
   paths:
-    watched: [ 'source', 'events' ]
+    watched: ['source']
 
   conventions:
     assets: /source\/static/
