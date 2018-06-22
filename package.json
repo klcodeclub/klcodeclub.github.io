@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run clean && ./node_modules/brunch/bin/brunch watch --server --port 8888",
     "build": "npm run clean && ./node_modules/brunch/bin/brunch build --production",
-    "deploy": "git subtree push --prefix public origin gh-pages",
+    "deploy": "npm run build && git subtree push --prefix public origin master",
     "clean": "rm -rf public"
   },
   "repository": {
