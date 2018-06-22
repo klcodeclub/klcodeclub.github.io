@@ -26,8 +26,6 @@ config =
       'assets/javascripts/package.js': ['package.js']
 
   plugins:
-    babel:
-      presets: ['es2015']
     digest:
       referenceFiles: /\.(html|js|css)$/
     jadeStatic:
