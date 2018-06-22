@@ -50,6 +50,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# Brunch output
-public

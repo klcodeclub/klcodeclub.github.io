@@ -1,0 +1,18 @@
+html {
+  background: #fff;
+}
+html,
+pre,
+.terminal-input {
+  font-size: 16px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.terminal-input {
+  border: 0;
+}
+.terminal-input:focus {
+  outline: none;
+}
+
+
+/*# sourceMappingURL=package.css.map*/
