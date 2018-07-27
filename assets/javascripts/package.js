@@ -472,7 +472,7 @@ var _commands = require('./commands');
 
 // Importing the /bin/ version doesn't work, possibly due to `require`
 // collision with brunch?
-new TermlyPrompt('#terminal', {
+var terminal = new TermlyPrompt('#terminal', {
   commands: {
     klcodeclub: {
       name: 'klcodeclub',
@@ -502,8 +502,34 @@ new TermlyPrompt('#terminal', {
   }
 });
 
+terminal.container.addEventListener('keydown', tabCompletion);
+document.addEventListener('click', refocus);
+
 function helpInfo() {
   return 'The first rule of Code Club is: You must commit code.\nThe second rule of Code Club is: You must commit code!\n\nUsage: klcodeclub [options]\n\n-h, --help                Make helpful text appear.\n\n-l, --list[=YYYY-MM-DD]   List all events. Pass a date to get info about a\n                          specific event.\n\n-n, --next                Get info about the next event.\n\n-n, --previous            Get info about the previous event.\n\n-i, --issues              Make a bug report / feature request on Github.\n';
+}
+
+function tabCompletion(e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+
+    var input = terminal.container.querySelector('.current .terminal-input');
+    var search = input.value;
+    var commands = Object.keys(terminal.ShellCommands).filter(function (c) {
+      return c.indexOf(search) === 0;
+    });
+
+    // TODO Cycle through options
+    if (commands.length) {
+      input.value = commands[0];
+      input.focus();
+    }
+  }
+}
+
+function refocus() {
+  var input = terminal.container.querySelector('.current .terminal-input');
+  input.focus();
 }
 });
 
