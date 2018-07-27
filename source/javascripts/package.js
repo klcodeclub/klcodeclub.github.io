@@ -3,7 +3,7 @@
 import 'termly.js/dist/termly-prompt.min';
 import {listSingleEvent, listEvents, nextEvent, previousEvent, openIssues} from './commands';
 
-new TermlyPrompt('#terminal', {
+const terminal = new TermlyPrompt('#terminal', {
   commands: {
     klcodeclub: {
       name: 'klcodeclub',
@@ -37,6 +37,9 @@ new TermlyPrompt('#terminal', {
   }
 });
 
+terminal.container.addEventListener('keydown', tabCompletion);
+document.addEventListener('click', refocus);
+
 function helpInfo() {
   return `The first rule of Code Club is: You must commit code.
 The second rule of Code Club is: You must commit code!
@@ -54,4 +57,26 @@ Usage: klcodeclub [options]
 
 -i, --issues              Make a bug report / feature request on Github.
 `;
+}
+
+function tabCompletion(e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+
+    const input = terminal.container.querySelector('.current .terminal-input');
+    const search = input.value;
+    const commands = Object.keys(terminal.ShellCommands)
+      .filter(c => c.indexOf(search) === 0);
+
+    // TODO Cycle through options
+    if (commands.length) {
+      input.value = commands[0];
+      input.focus();
+    }
+  }
+}
+
+function refocus() {
+  const input = terminal.container.querySelector('.current .terminal-input');
+  input.focus();
 }
