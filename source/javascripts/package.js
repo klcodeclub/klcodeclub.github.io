@@ -1,7 +1,7 @@
 // Importing the /bin/ version doesn't work, possibly due to `require`
 // collision with brunch?
 import 'termly.js/dist/termly-prompt.min';
-import {listSingleEvent, listEvents, nextEvent, previousEvent} from './commands';
+import {listSingleEvent, listEvents, nextEvent, previousEvent, openIssues} from './commands';
 
 new TermlyPrompt('#terminal', {
   commands: {
@@ -21,6 +21,9 @@ new TermlyPrompt('#terminal', {
 
         } else if (ARGV.p || ARGV.previous) {
           return previousEvent();
+
+        } else if (ARGV.i || ARGV.issues) {
+          return openIssues();
 
         } else {
           return helpInfo();
@@ -48,5 +51,7 @@ Usage: klcodeclub [options]
 -n, --next                Get info about the next event.
 
 -n, --previous            Get info about the previous event.
+
+-i, --issues              Make a bug report / feature request on Github.
 `;
 }

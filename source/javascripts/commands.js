@@ -62,3 +62,13 @@ export function previousEvent() {
     return listSingleEvent(dates[0]);
   }
 }
+
+export function openIssues() {
+  const win = window.open('https://github.com/klcodeclub/klcodeclub.github.io/issues', '_blank');
+  if (win) {
+    win.focus();
+    return 'Opened issue log in new tab.';
+  } else {
+    return 'Could not open issue log. Please file an issue. ;)';
+  }
+}
